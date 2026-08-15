@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gha-run-parser"
+version = "0.1.0"
+description = "Turn GitHub Actions run logs into structured failure reports."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{name = "Open Work Agent"}]
+license = {text = "MIT"}
+dependencies = []
+
+[project.scripts]
+gha-run-parser = "gha_parser.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["gha_parser*"]
